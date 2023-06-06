@@ -1,0 +1,26 @@
+.bg-rodape {
+    background-color: #323232;
+}
+
+.color-footer {
+    color: #E9EBF8;
+}
+
+.container-rodape a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+#linha {
+    text-align: center;
+    border-top: 1px solid #E9EBF8;
+
+}
+
+.fs-7 {
+    font-size: 0.85rem;
+}
+
+.link-decoration:hover {
+    color: rgb(0, 0, 0) !important;
+}
