@@ -29,17 +29,19 @@ const AdministracaoProdutos = () => {
                         <TableCell><strong>id</strong></TableCell>
                         <TableCell>Produto</TableCell>
                         <TableCell>Qnt</TableCell>
+                        <TableCell>Preço</TableCell>
                         <TableCell align="right">Editar</TableCell>
                         <TableCell align="right">Deletar</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {produtos.map(produto =>
-                        <TableRow key={produto.id}>
+                    {produtos.map((produto, index) =>
+                        <TableRow key={index}>
                             <TableCell>{produto.id}</TableCell>
                             <TableCell>{produto.nome}</TableCell>
                             <TableCell>{produto.qtdDisponivel}</TableCell>
-                            <TableCell align="right"><Link to={`/admin/restaurantes/${produto.id}`}><Button>Editar</Button></Link></TableCell>
+                            <TableCell>R$ {produto.preco}</TableCell>
+                            <TableCell align="right"><Link to={`/admin/produtos/${produto.id}`}><Button>Editar</Button></Link></TableCell>
                             <TableCell align="right">
                                 <Button variant="outlined" color="error" onClick={() => excluir(produto)}>
                                     Delete

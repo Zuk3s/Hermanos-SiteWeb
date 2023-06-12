@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from "@mui/material"
+import { Box, Button, Paper, TextField, Typography } from "@mui/material"
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
 import IProdutos from "../../../interfaces/IProdutos"
@@ -11,13 +11,20 @@ const FormularioProdutos = () => {
     useEffect(() => {
         if (parametros.id) {
             http.get<IProdutos>(`produtos/${parametros.id}`)
-                .then(resposta => setNomeProduto(resposta.data.nome))
+                .then(resposta => (
+                    setNomeProduto(resposta.data.nome),
+                    setDescricaoProduto(resposta.data.descricao),
+                    setPrecoProduto(String(resposta.data.preco)),
+                    setQntProduto(String(resposta.data.qtdDisponivel))
+                ));
         }
     }, [parametros])
 
     const [nomeProduto, setNomeProduto] = useState('')
     const [descricaoProduto, setDescricaoProduto] = useState('')
     const [precoProduto, setPrecoProduto] = useState('')
+    const [qntProduto, setQntProduto] = useState('')
+    const [url_imagemProduto, setImagemProduto] = useState('')
 
     const aoSubmeterForm = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
@@ -26,19 +33,24 @@ const FormularioProdutos = () => {
             http.put(`produtos/${parametros.id}`, {
                 nome: nomeProduto,
                 descricao: descricaoProduto,
-                preco: precoProduto
+                preco: precoProduto,
+                qtdDisponivel: qntProduto,
+                url_imagem: url_imagemProduto
             })
                 .then(() => {
-                    alert("Restaurante atualizado com sucesso!")
+                    alert("Produto atualizado com sucesso!")
                 })
         } else {
             http.post("produtos", {
                 nome: nomeProduto,
                 descricao: descricaoProduto,
-                preco: precoProduto
+                preco: precoProduto,
+                qtdDisponivel: qntProduto,
+                url_imagem: url_imagemProduto
+
             })
                 .then(() => {
-                    alert("Restaurante cadastrado com sucesso!")
+                    alert("Produto cadastrado com sucesso!")
                 })
         }
     }
@@ -54,6 +66,7 @@ const FormularioProdutos = () => {
                     variant="outlined"
                     fullWidth
                     required
+                    sx={{ marginY: "5px" }}
                 />
                 <TextField
                     value={descricaoProduto}
@@ -62,6 +75,7 @@ const FormularioProdutos = () => {
                     variant="outlined"
                     fullWidth
                     required
+                    sx={{ marginY: "5px" }}
                 />
                 <TextField
                     value={precoProduto}
@@ -70,8 +84,35 @@ const FormularioProdutos = () => {
                     variant="outlined"
                     fullWidth
                     required
+                    sx={{ marginY: "5px" }}
                 />
-                <Button sx={{ marginTop: 2 }} type="submit" variant="contained" fullWidth> Atualizar </Button>
+                <TextField
+                    value={qntProduto}
+                    onChange={evento => setQntProduto(evento.target.value)}
+                    label="Quantidade"
+                    variant="outlined"
+                    fullWidth
+                    required
+                    sx={{ marginY: "5px" }}
+                />
+                <TextField
+                    value={url_imagemProduto}
+                    onChange={evento => setImagemProduto(evento.target.value)}
+                    label="Url da imagem"
+                    variant="outlined"
+                    fullWidth
+                    required
+                    sx={{ marginY: "5px" }}
+                />
+                {/* 
+                <Paper>
+                    <div className="my-2 p-2">
+                        <label htmlFor="formFile" className="form-label">Imagem do produto:</label>
+                        <input className="form-control" type="file" id="formFile" />
+                    </div>
+                </Paper>
+                */}
+                <Button sx={{ marginTop: 2 }} type="submit" variant="contained" fullWidth> Salvar </Button>
             </Box>
         </Box>
     )
