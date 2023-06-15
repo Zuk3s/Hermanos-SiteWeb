@@ -22,7 +22,7 @@ const AdministracaoProdutos = () => {
     }
 
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{marginY: 7}}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>

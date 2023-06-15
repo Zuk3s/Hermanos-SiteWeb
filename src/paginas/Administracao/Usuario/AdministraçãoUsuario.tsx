@@ -22,33 +22,19 @@ const AdministracaoUsuarios = () => {
     }
 
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableContainer component={Paper} sx={{ marginY: 7 }}>
+            <Table aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell><strong>CPF</strong></TableCell>
                         <TableCell>User</TableCell>
                         <TableCell>Email</TableCell>
-                        <TableCell align="right">Editar</TableCell>
-                        <TableCell align="right">Deletar</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {usuarios.map((usuario, index) => (
                         <TableRow key={index}>
-                            <TableCell>{usuario.cpf}</TableCell>
                             <TableCell>{usuario.nome}</TableCell>
                             <TableCell>{usuario.email}</TableCell>
-                            <TableCell align="right">
-                                <Link to={`/admin/usuarios/${usuario.cpf}`}>
-                                    <Button>Editar</Button>
-                                </Link>
-                            </TableCell>
-                            <TableCell align="right">
-                                <Button variant="outlined" color="error" onClick={() => excluir(usuario)}>
-                                    Delete
-                                </Button>
-                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

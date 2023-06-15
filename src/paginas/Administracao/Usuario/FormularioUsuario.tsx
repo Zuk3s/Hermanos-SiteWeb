@@ -31,18 +31,17 @@ const FormularioUsuario = () => {
                 senha: senhaUsuario
             })
                 .then(() => {
-                    alert("Restaurante atualizado com sucesso!")
+                    alert("Usuario atualizado com sucesso!")
                 })
         } else {
             http.post("usuarios", {
                 cpf: cpfUsuario,
                 nome: nomeUsuario,
-                descricao: emailUsuario,
-                preco: senhaUsuario
-
+                email: emailUsuario,
+                senha: senhaUsuario
             })
                 .then(() => {
-                    alert("Produto cadastrado com sucesso!")
+                    alert("Usuário cadastrado com sucesso!")
                 })
         }
     }

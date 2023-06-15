@@ -4,14 +4,20 @@ import Heart from "../assets/heart_.png"
 import User from "../assets/User.png"
 import Logo from "../assets/noNickLogo1.png"
 import { Link } from "react-router-dom"
+import FormularioLogin from "../FormLogin"
 
 const NavBar = () => {
+
   return (
     <nav className="px-lg-4 navbar navbar-expand-lg justify-content-between align-items-center bg-white-blue">
       <div className="container-fluid py-2">
         <div className="col nav">
-          <a href="#" className="nav-link text-dark border-end">Login</a>
-          <a href="#" className="nav-link text-dark">Registre-se</a>
+          <a type="button" className="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#ModalLogin">Entrar</a>
+
+          <div className="modal modal-xl fade" id="ModalLogin" tabIndex={-1} aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <FormularioLogin />
+          </div>
         </div>
         <a href="#"><img src={Logo} alt="Logo" width={200}></img></a>
 
@@ -30,7 +36,7 @@ const NavBar = () => {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link to={'/'} className="nav-link"><img src={User} alt="User"></img></Link>
+                <Link to={'/admin'} className="nav-link"><img src={User} alt="User"></img></Link>
               </li>
               <li className="nav-item">
                 <Link to={''} className="nav-link active"><img src={Cart} alt="Carrinho"></img></Link>

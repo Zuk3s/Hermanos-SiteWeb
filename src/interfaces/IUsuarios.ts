@@ -2,7 +2,7 @@ import ICarrinhos from "./ICarrinhos"
 import IPedidos from "./IPedidos"
 
 export default interface IUsurarios {
-    cpf: number
+    cpf: string
     nome: string
     email: string
     senha: string

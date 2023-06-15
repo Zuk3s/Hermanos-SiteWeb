@@ -6,14 +6,14 @@ import VitrineProdutos from './paginas/VitrineProdutos';
 import AdministracaoProdutos from './paginas/Administracao/Produtos/AdministracaoProdutos';
 import AdministracaoUsuarios from './paginas/Administracao/Usuario/AdministraçãoUsuario';
 import FormularioUsuario from './paginas/Administracao/Usuario/FormularioUsuario';
+import FormularioLogin from './componentes/FormLogin';
 
 
 function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/produtos" element={<VitrineProdutos />} />
+      <Route path="/" element={<VitrineProdutos />} />
 
       <Route path='/admin' element={<NavBarAdmin />}>
         <Route path='produtos' element={<AdministracaoProdutos />} />
