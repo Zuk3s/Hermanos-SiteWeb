@@ -5,10 +5,10 @@ import "./Rodape.css"
 
 const NavBar = () => {
   return (
-    <section className="color-footer bg-rodape">
+    <section className="color-footer bg-rodape fixed-bottom">
       <section className="m-5 m-lg-0 ">
         <div className="pt-5 row row-cols-5 row-cols-md-5 g-0">
-          <img src={WhiteLogo} className="pb-5 mx-5 col-10 col-md justify-content-center" alt="logo"></img>
+          <img src={WhiteLogo} className="pb-5 mx-5 col-10 col-md justify-content-center object-fit-scale " alt="logo"></img>
 
           <nav className="d-flex flex-column col-4 gap-2">
             <h6 className="nav-link">Suporte</h6>
@@ -19,7 +19,7 @@ const NavBar = () => {
           </nav>
 
           <nav className="d-flex flex-column col-5 gap-2">
-            <h6 className="nav-link">Sobre a NoNick</h6>
+            <h6 className="nav-link fs-bold">Sobre a NoNick</h6>
             <div>
               <p className="nav-link link-decoration">Informações da empresa</p>
               <p className="nav-link link-decoration">Contato</p>

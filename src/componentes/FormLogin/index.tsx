@@ -46,10 +46,10 @@ const FormularioLogin = () => {
                             <div className="my-4">
                                 <Link to={""} className="btn btn-lg btn-outline-light rounded-4 mb-4"><h3 className="m-1 px-4">Entrar</h3></Link>
                                 <p>
-                                    <a href=""
+                                    <Link to={""}
                                         className="link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover link-light link-underline-light">
                                         Esqueci minha senha.
-                                    </a>
+                                    </Link>
                                 </p>
                             </div>
                         </div>

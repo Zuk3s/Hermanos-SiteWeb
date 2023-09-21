@@ -8,7 +8,11 @@ const NavBarAdmin = () => {
             <AppBar position="static">
                 <Container maxWidth='xl'>
                     <Toolbar>
-                        <Typography>Administração</Typography>
+                        <Box>
+                            <Link component={RouterLink} to={'/'}>
+                                <Button sx={{ color: 'white' }}>Home</Button>
+                            </Link>
+                        </Box>
                         <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: "right" }} >
                             <Box>
                                 <Link component={RouterLink} to={'/admin/produtos'}>
