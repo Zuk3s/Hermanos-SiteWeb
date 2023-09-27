@@ -5,7 +5,7 @@ import "./Rodape.css"
 
 const NavBar = () => {
   return (
-    <section className="color-footer bg-rodape fixed-bottom">
+    <section className="color-footer bg-rodape">
       <section className="m-5 m-lg-0 ">
         <div className="pt-5 row row-cols-5 row-cols-md-5 g-0">
           <img src={WhiteLogo} className="pb-5 mx-5 col-10 col-md justify-content-center object-fit-scale " alt="logo"></img>

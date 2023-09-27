@@ -11,7 +11,10 @@ const FormularioUsuario = () => {
     useEffect(() => {
         if (parametros.cpf) {
             http.get<IUsurarios>(`usuarios/${parametros.cpf}`)
-                .then(resposta => setNomeUsuario(resposta.data.nome));
+                .then(resposta => (
+                    setNomeUsuario(resposta.data.nome),
+                    setEmailUsuario(resposta.data.email)
+                ));
         }
     }, [parametros])
 

@@ -27,7 +27,7 @@ const NavBar = () => {
           {usuarioLogado && (
             <>
               <div className="d-flex gap-2 align-items-center">
-                <img className="rounded" width={48} src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Usuário"/>
+                <img className="rounded" width={48} src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Usuário" />
                 <p className="font-monospace fs-6 m-0">Nome</p>
               </div>
             </>
@@ -52,6 +52,9 @@ const NavBar = () => {
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li className="nav-item">
+                <Link to={'/admin'} className="nav-link active"><img src={User} alt="User"></img></Link>
+              </li>
               <li className="nav-item">
                 <a className="nav-link" ><img src={Search} alt="Search"></img></a>
               </li>

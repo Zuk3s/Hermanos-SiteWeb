@@ -15,7 +15,8 @@ const FormularioProdutos = () => {
                     setNomeProduto(resposta.data.nome),
                     setDescricaoProduto(resposta.data.descricao),
                     setPrecoProduto(String(resposta.data.preco)),
-                    setQntProduto(String(resposta.data.qtdDisponivel))
+                    setQntProduto(String(resposta.data.qtdDisponivel)),
+                    setImagemProduto(String(resposta.data.urlImagem))
                 ));
         }
     }, [parametros])
@@ -24,7 +25,7 @@ const FormularioProdutos = () => {
     const [descricaoProduto, setDescricaoProduto] = useState('')
     const [precoProduto, setPrecoProduto] = useState('')
     const [qntProduto, setQntProduto] = useState('')
-    const [url_imagemProduto, setImagemProduto] = useState('')
+    const [urlImagemProduto, setImagemProduto] = useState('')
 
     const aoSubmeterForm = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
@@ -35,7 +36,7 @@ const FormularioProdutos = () => {
                 descricao: descricaoProduto,
                 preco: precoProduto,
                 qtdDisponivel: qntProduto,
-                url_imagem: url_imagemProduto
+                urlImagem: urlImagemProduto
             })
                 .then(() => {
                     alert("Produto atualizado com sucesso!")
@@ -46,8 +47,7 @@ const FormularioProdutos = () => {
                 descricao: descricaoProduto,
                 preco: precoProduto,
                 qtdDisponivel: qntProduto,
-                url_imagem: url_imagemProduto
-
+                urlImagem: urlImagemProduto
             })
                 .then(() => {
                     alert("Produto cadastrado com sucesso!")
@@ -96,12 +96,11 @@ const FormularioProdutos = () => {
                     sx={{ marginY: "5px" }}
                 />
                 <TextField
-                    value={url_imagemProduto}
+                    value={urlImagemProduto}
                     onChange={evento => setImagemProduto(evento.target.value)}
                     label="Url da imagem"
                     variant="outlined"
                     fullWidth
-                    required
                     sx={{ marginY: "5px" }}
                 />
                 {/* 

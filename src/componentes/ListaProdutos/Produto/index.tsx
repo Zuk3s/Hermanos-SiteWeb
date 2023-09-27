@@ -6,12 +6,12 @@ interface ProtudoProps {
 
 const Produto = ({ produto }: ProtudoProps) => {
   return (
-    <div className="card rounded-0" style={{ width: '20rem', height: '35rem' }}>
+    <div className="card rounded-0" style={{ width: '20rem', height: '27.5rem' }}>
       <div style={{ position: 'relative', overflow: 'hidden', height: '400px' }}>
         <img
-          src={produto.url_imagem}
-          className="img-fluid object-fit-cover"
-          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          src={produto.urlImagem}
+          className="img-fluid"
+          style={{ objectFit: 'cover', height: '100%' }}
           alt="Imagem"
         />
       </div>

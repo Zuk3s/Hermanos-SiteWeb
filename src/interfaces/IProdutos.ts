@@ -3,7 +3,7 @@ export default interface IProdutos {
     nome: string
     descricao: string
     preco: number
-    url_imagem: string
+    urlImagem: string
     qtdDisponivel: number
     categoria: string
 }

@@ -28,6 +28,7 @@ const AdministracaoUsuarios = () => {
                     <TableRow>
                         <TableCell>User</TableCell>
                         <TableCell>Email</TableCell>
+                        <TableCell align="right">Deletar</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -35,6 +36,11 @@ const AdministracaoUsuarios = () => {
                         <TableRow key={index}>
                             <TableCell>{usuario.nome}</TableCell>
                             <TableCell>{usuario.email}</TableCell>
+                            <TableCell align="right">
+                                <Button variant="outlined" color="error" onClick={() => excluir(usuario)}>
+                                    Delete
+                                </Button>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
