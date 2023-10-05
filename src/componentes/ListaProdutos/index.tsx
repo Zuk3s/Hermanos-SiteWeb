@@ -18,12 +18,13 @@ const ListaProdutos = () => {
       })
   }, [])
 
+
   return (
-    <div className="m-5 d-flex flex-column">
+    <div className="d-flex flex-column justify-content-center container-fluid lista-produtos limite py-3">
       <h1 className="display-6 fw-bold">Produtos</h1>
-      <div className="d-flex flex-row overflow-x-auto">
+      <div className="d-flex">
         {produtos?.map((item, index) => (
-          <div className='produto mx-2' key={index}>
+          <div className='produto me-2' key={index}>
             <Produto produto={item} />
           </div>
         ))}

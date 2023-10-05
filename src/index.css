@@ -8,23 +8,45 @@
   src: url("./componentes/assets/fonts/HammerBroInBowserIsBack-Regular.otf") format(opentype);
 }
 
-body, html{
+body,
+html {
   margin: 0;
   font-family: Atlas;
-  letter-spacing: 3px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 2px;
+  height: -webkit-fill-available;
 }
 
-.bg-white-blue {
+#root {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.Hammer {
+  font-family: Hammer;
+}
+
+.limite {
+  min-width: 780px;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.bg-nav {
   background: #a5a4a4;
+  flex-grow: 0;
+  flex-basis: auto;
 }
 
-.bg-marrom {
-  background: #C6C6C6;
+.lista-produtos {
+  width: 90%;
+  flex-grow: 1;
+  flex-basis: auto;
 }
 
-.product {
-  width: 200px;
-  margin-right: 1rem;
+.card {
+  max-width: 8.5cm;
+  height: 11cm;
 }

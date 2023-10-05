@@ -1,12 +1,11 @@
-.bg-rodape {
-    background-color: #472a2a;
-}
-
 .color-footer {
     color: #E9EBF8;
+    background-color: #472a2a;
+    flex-grow: 0;
+    flex-basis: 100px;
 }
 
-.container-rodape a:hover {
+.a:hover {
     color: rgb(0, 0, 0);
 
 }
@@ -16,11 +15,15 @@
 }
 
 .link-decoration {
-    text-decoration: none;
-    text-decoration-line: none;
     color: rgb(199, 199, 199);
+    text-decoration: none;
 }
 
 .link-decoration:hover {
-    color: rgb(163, 162, 162) !important;
+    color: rgb(163, 162, 162);
+    text-decoration: underline;
+}
+
+.padding {
+    padding: 2% 0 2% 0;
 }

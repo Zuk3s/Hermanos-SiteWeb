@@ -6,7 +6,7 @@ interface ProtudoProps {
 
 const Produto = ({ produto }: ProtudoProps) => {
   return (
-    <div className="card rounded-0 d-flex flex-row" style={{ width: '35rem', height: '25.1rem'}}>
+    <div className="card rounded-0 d-flex">
       <div style={{ position: 'relative', overflow: 'hidden', height: '400px' }}>
         <img
           src={produto.urlImagem}
