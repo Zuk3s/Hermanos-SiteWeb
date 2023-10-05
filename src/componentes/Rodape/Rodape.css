@@ -1,5 +1,5 @@
 .bg-rodape {
-    background-color: #323232;
+    background-color: #472a2a;
 }
 
 .color-footer {
@@ -11,16 +11,16 @@
 
 }
 
-#linha {
-    text-align: center;
-    border-top: 1px solid #E9EBF8;
-
-}
-
 .fs-7 {
     font-size: 0.85rem;
 }
 
+.link-decoration {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: rgb(199, 199, 199);
+}
+
 .link-decoration:hover {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(163, 162, 162) !important;
 }

@@ -20,10 +20,10 @@ const ListaProdutos = () => {
 
   return (
     <div className="m-5 d-flex flex-column">
-      <h1 className="display-6 fw-bold">T-Shirt</h1>
+      <h1 className="display-6 fw-bold">Produtos</h1>
       <div className="d-flex flex-row overflow-x-auto">
         {produtos?.map((item, index) => (
-          <div className='produto' key={index}>
+          <div className='produto mx-2' key={index}>
             <Produto produto={item} />
           </div>
         ))}

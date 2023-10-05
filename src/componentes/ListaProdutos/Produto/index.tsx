@@ -6,7 +6,7 @@ interface ProtudoProps {
 
 const Produto = ({ produto }: ProtudoProps) => {
   return (
-    <div className="card rounded-0" style={{ width: '20rem', height: '27.5rem' }}>
+    <div className="card rounded-0 d-flex flex-row" style={{ width: '35rem', height: '25.1rem'}}>
       <div style={{ position: 'relative', overflow: 'hidden', height: '400px' }}>
         <img
           src={produto.urlImagem}
@@ -15,7 +15,7 @@ const Produto = ({ produto }: ProtudoProps) => {
           alt="Imagem"
         />
       </div>
-      <div className="card-body ps-4 pb-3 bg-white-blue d-flex flex-column">
+      <div className="card-body ps-4 pb-3 bg-white-blue d-flex flex-column" style={{width: "25rem"}}>
         <h5 className="card-title fw-bolder fs-5">{produto.nome}</h5>
         <p className="card-text">{produto.descricao}</p>
         <p className="card-text fw-bold text-end mt-auto">R${produto.preco},00</p>

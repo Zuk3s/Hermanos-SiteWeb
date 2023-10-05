@@ -5,7 +5,7 @@ import { Outlet, Link as RouterLink } from "react-router-dom";
 const NavBarAdmin = () => {
     return (
         <>
-            <AppBar position="static">
+            <AppBar sx={{position: "static", backgroundColor: "#323232"}}>
                 <Container maxWidth='xl'>
                     <Toolbar>
                         <Box>
