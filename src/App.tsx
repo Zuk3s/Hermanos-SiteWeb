@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './paginas/Home';
 import FormularioProdutos from './paginas/Administracao/Produtos/FormularioProdutos';
 import NavBarAdmin from './paginas/Administracao/NavBarAdmin';
 import VitrineProdutos from './paginas/VitrineProdutos';

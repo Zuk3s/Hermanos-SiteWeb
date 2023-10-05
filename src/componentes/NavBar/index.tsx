@@ -1,6 +1,4 @@
 import Cart from "../assets/cart_.png"
-import Search from "../assets/search_.png"
-import Heart from "../assets/heart_.png"
 import User from "../assets/User.png"
 import Logo from "../assets/logoComSimbolo.png"
 import { Link } from "react-router-dom"

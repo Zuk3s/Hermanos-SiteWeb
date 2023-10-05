@@ -20,17 +20,16 @@ const ListaProdutos = () => {
 
 
   return (
-    <div className="d-flex flex-column justify-content-center container-fluid lista-produtos limite py-3">
+    <div className='lista-produtos limite my-5 d-flex flex-column gap-3'>
       <h1 className="display-6 fw-bold">Produtos</h1>
-      <div className="d-flex">
+      <div className="conteiner-produtos d-flex flex-wrap gap-4">
         {produtos?.map((item, index) => (
-          <div className='produto me-2' key={index}>
-            <Produto produto={item} />
-          </div>
+          <Produto produto={item} key={index} />
         ))}
       </div>
     </div>
   )
 }
+
 
 export default ListaProdutos

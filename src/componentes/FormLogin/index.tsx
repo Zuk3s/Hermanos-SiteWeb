@@ -1,4 +1,4 @@
-import "./login.css"
+import "./../../index.css"
 import LogoWhite from "../assets/logoWhite.png"
 import { useState } from "react"
 import http from "../../http"

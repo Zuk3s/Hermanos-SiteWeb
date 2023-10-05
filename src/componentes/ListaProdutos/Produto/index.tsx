@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button/Button';
 import IProdutos from '../../../interfaces/IProdutos';
 
 interface ProtudoProps {
@@ -6,19 +7,30 @@ interface ProtudoProps {
 
 const Produto = ({ produto }: ProtudoProps) => {
   return (
-    <div className="card rounded-0 d-flex">
-      <div style={{ position: 'relative', overflow: 'hidden', height: '400px' }}>
+    <div className="rounded-3 d-flex flex-column produto">
+      <div className='imagem-produto rounded-top-3'>
         <img
           src={produto.urlImagem}
-          className="img-fluid"
-          style={{ objectFit: 'cover', height: '100%' }}
+          className="img-fluid conf-imagem"
           alt="Imagem"
         />
       </div>
-      <div className="card-body ps-4 pb-3 bg-white-blue d-flex flex-column" style={{width: "25rem"}}>
-        <h5 className="card-title fw-bolder fs-5">{produto.nome}</h5>
-        <p className="card-text">{produto.descricao}</p>
-        <p className="card-text fw-bold text-end mt-auto">R${produto.preco},00</p>
+      <div className="Card-Titulo pt-2">
+        <h5 className="fs-4 text-center">{produto.nome}</h5>
+      </div>
+      <div className='Card-Descrição rounded-3'>
+        <div className='h-80 d-flex flex-column align-items-start justify-content-between mx-4'>
+          <div>
+            <h3 className='fs-2'>Descrição</h3>
+            <p className='fs-8 Hammer text-break font-monospace'>{produto.descricao}</p>
+          </div>
+          <div className='d-flex justify-content-between Hammer w-100'>
+            <p className="text-end align-self-end fs-5 ">R${produto.preco},00</p>
+            <button className='btn btn-outline-light p-2 px-4' type='button'>
+              Carrinho <span className='ms-1 span-text'>+</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )

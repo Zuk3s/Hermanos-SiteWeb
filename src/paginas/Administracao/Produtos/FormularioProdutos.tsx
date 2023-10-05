@@ -1,4 +1,4 @@
-import { Box, Button, Paper, TextField, Typography } from "@mui/material"
+import { Box, Button, TextField, Typography } from "@mui/material"
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
 import IProdutos from "../../../interfaces/IProdutos"
@@ -11,13 +11,15 @@ const FormularioProdutos = () => {
     useEffect(() => {
         if (parametros.id) {
             http.get<IProdutos>(`produtos/${parametros.id}`)
-                .then(resposta => (
-                    setNomeProduto(resposta.data.nome),
-                    setDescricaoProduto(resposta.data.descricao),
-                    setPrecoProduto(String(resposta.data.preco)),
-                    setQntProduto(String(resposta.data.qtdDisponivel)),
-                    setImagemProduto(String(resposta.data.urlImagem))
-                ));
+                .then(resposta => {
+                    if (resposta.data) {
+                        setNomeProduto(resposta.data.nome || '');
+                        setDescricaoProduto(resposta.data.descricao || '');
+                        setPrecoProduto(String(resposta.data.preco) || '');
+                        setQntProduto(String(resposta.data.qtdDisponivel) || '');
+                        setImagemProduto(String(resposta.data.urlImagem) || '');
+                    }
+                });
         }
     }, [parametros])
 
@@ -50,6 +52,11 @@ const FormularioProdutos = () => {
                 urlImagem: urlImagemProduto
             })
                 .then(() => {
+                    setNomeProduto('')
+                    setDescricaoProduto('')
+                    setPrecoProduto('')
+                    setNomeProduto('')
+                    setImagemProduto('')
                     alert("Produto cadastrado com sucesso!")
                 })
         }

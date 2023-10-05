@@ -1,7 +1,7 @@
 import Instagram from "../assets/instagram_.png"
 import Twitter from "../assets/twitter_.png"
 import Logo from "../assets/logoWhite.png"
-import "./Rodape.css"
+import "./../../index.css"
 
 const NavBar = () => {
   return (

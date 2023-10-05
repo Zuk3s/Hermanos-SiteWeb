@@ -34,19 +34,141 @@ html {
   max-width: 200px;
 }
 
+/*FomrLogin*/
+
+.bg-preto {
+  background-color: #323232;
+}
+
+.bg-branco-amarelado {
+  background-color: #C6C6C6;
+}
+
+.centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*NavBar*/
+
 .bg-nav {
   background: #a5a4a4;
   flex-grow: 0;
   flex-basis: auto;
 }
 
+
+/*Produto*/
+
 .lista-produtos {
-  width: 90%;
   flex-grow: 1;
   flex-basis: auto;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
-.card {
-  max-width: 8.5cm;
-  height: 11cm;
+.Card-Titulo {
+  color: #E9EBF8;
+}
+
+.produto {
+  max-width: 9.5cm;
+  height: 13.5cm;
+  width: 50%;
+  background-color: #472a2a;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.imagem-produto {
+  height: 90%;
+}
+
+.conf-imagem {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.Card-Descrição {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  position: absolute;
+  top: 100%;
+  transition: top 0.55s;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.h-80 {
+  height: 90%;
+}
+
+.span-text {
+  font-size: 20px;
+}
+
+.produto:hover .Card-Descrição {
+  top: 0;
+}
+
+.Card-Descrição p{
+  margin: 0;
+}
+
+.imagem-produto, .Card-Titulo {
+  transition: opacity 0.3s;
+}
+
+.produto:hover .imagem-produto, .produto:hover .Card-Titulo {
+  opacity: 0;
+}
+
+
+
+/*Rodapé*/
+
+.color-footer {
+  color: #E9EBF8;
+  background-color: #472a2a;
+  flex-grow: 0;
+  flex-basis: 100px;
+}
+
+.a:hover {
+  color: rgb(0, 0, 0);
+
+}
+
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+.fs-8 {
+  font-size: 0.70rem;
+  color: #dad8d8;
+}
+
+
+.link-decoration {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+}
+
+.link-decoration:hover {
+  color: rgb(163, 162, 162);
+  text-decoration: underline;
+}
+
+.padding {
+  padding: 2% 0 2% 0;
 }
