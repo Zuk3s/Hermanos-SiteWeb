@@ -1,4 +1,3 @@
-import Button from '@mui/material/Button/Button';
 import IProdutos from '../../../interfaces/IProdutos';
 
 interface ProtudoProps {

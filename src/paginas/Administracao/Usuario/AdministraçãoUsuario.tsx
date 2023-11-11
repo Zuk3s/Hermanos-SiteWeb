@@ -1,6 +1,5 @@
 import { Paper, TableContainer, Table, TableHead, TableRow, TableBody, TableCell, Button } from "@mui/material";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import http from "../../../http";
 import IUsurarios from "../../../interfaces/IUsuarios";
 

@@ -15,8 +15,8 @@ const NavBar = () => {
         <div className="nav fs-7" style={{width: 200}}>
           {!usuarioLogado && (
             <>
-              <a type="button" className="nav-item text-dark Hammer" data-bs-toggle="modal" data-bs-target="#ModalLogin">Entrar</a>
-              <div className="modal modal-xl fade" id="ModalLogin" tabIndex={-1} aria-labelledby="exampleModalLabel"
+              <span className="nav-item text-dark Hammer" data-bs-toggle="modal" data-bs-target="#ModalLogin">Entrar</span>
+              <div className="modal" id="ModalLogin" tabIndex={-1} aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <FormularioLogin />
               </div>
