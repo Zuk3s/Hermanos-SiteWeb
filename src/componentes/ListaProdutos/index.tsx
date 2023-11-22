@@ -8,8 +8,14 @@ const ListaProdutos = () => {
 
   const [produtos, setProdutos] = useState<IProdutos[]>([])
 
+  const config = {
+    headers: {
+      'JWT_SECRET' : '12345678'
+    }
+  };
+
   useEffect(() => {
-    http.get(`produtos`)
+    http.get(`produtos`, config)
       .then(resposta => {
         setProdutos(resposta.data)
       })
